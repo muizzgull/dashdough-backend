@@ -14,6 +14,7 @@ export const createReview = async (req, res) => {
         const newReview = await Review.create({userName, email, rating, review})
 
         res.status(201).json({
+            success: true,
             message: "Review added successfully",
             review: newReview
           });
